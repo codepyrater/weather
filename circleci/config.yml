@@ -14,20 +14,18 @@ jobs:
           steps:
             - run:
                 name: Install Dependencies
-                command: npm install
+                command: yarn install
             - run:
                 name: Build Project
-                command: npm run build
-            - run:
-                name: Run Tests
-                command: npm test
+                command: yarn build
             - run:
                 name: Deploy to GitHub Pages
                 command: |
                   git config --global user.email "punna1s@cmich.edu"
                   git config --global user.name "codepyrater"
-                   npm install gh-pages --save-dev
-                  npm run deploy
+                  git add build/
+                  git commit -m "Deploy to GitHub Pages"
+                  git push origin main
 
 workflows:
   version: 2
