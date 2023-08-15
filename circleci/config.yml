@@ -26,7 +26,7 @@ jobs:
                   git checkout main
                   cp -r build/* .
                   git add .
-                  git commit -m "Deploy to GitHub Pages"
+                  git commit -m "Deploy"
                   git push origin main
 
 workflows:
