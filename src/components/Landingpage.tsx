@@ -1,8 +1,14 @@
 import React from "react";
 
+
+import { Link } from "@mui/material";
+import { Navbar } from "./Navbar/navbar";
 export const LandingPage = () => {
-  return (
-    <div><h1>Hi Srikar</h1></div>
-    
-  );
-};
+  
+    return (
+      <div>
+       <Navbar></Navbar>
+      
+      </div>
+    );
+}
